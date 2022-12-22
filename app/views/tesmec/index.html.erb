@@ -1,0 +1,27 @@
+<h2>Repositories List</h2>
+
+<%= form_tag("/newrepo", method: "get") do %>
+  <%= label_tag(:q, "Create Repository:") %>
+  <%= text_field_tag(:q) %>
+  <%= hidden_field_tag("project_id", params['project_id']) %>
+  <%= submit_tag("Create") %>
+<% end %>
+<br/>
+<br/>
+<%= form_tag("/trackrepo", method: "get") do %>
+  <%= label_tag("Remote Repository:") %>
+  <%= text_field_tag(:repo) %>
+  <%= label_tag("Remote Repository tag (optional):") %>
+  <%= text_field_tag(:tag) %>
+  <%= label_tag("Local name (optional):") %>
+  <%= text_field_tag(:name) %>
+  <%= hidden_field_tag("project_id", params['project_id']) %>
+  <%= submit_tag("Track") %>
+<% end %>
+<br/>
+<br/>
+<%= form_tag("/viewrepo", method: "get") do %>
+  <%= label_tag("View Repositories list:") %>
+  <%= hidden_field_tag("project_id", params['project_id']) %>
+  <%= submit_tag("View") %>
+<% end %>

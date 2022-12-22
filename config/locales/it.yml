@@ -1,0 +1,7 @@
+# Italian strings go here for Rails i18n
+it:
+  # my_label: "My label"
+  permission_index_tesmec: Abilita il Plugin Tesmec
+  permission_createrepo_tesmec: Crea un Repository Tesmec 
+  permission_viewrepo_tesmec: Vedi i repository
+  permission_trackrepo_tesmec: Collega repository remoti

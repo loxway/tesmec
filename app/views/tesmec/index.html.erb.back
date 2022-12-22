@@ -1,0 +1,10 @@
+<h2>Elenco dei repository</h2>
+
+<pre>
+<%= %x(find /mnt/Repositories/ -name "*.git" -printf "%P\n") %>
+</pre>
+
+<%= form_for :pippo (:url => 'cippa') do |person_form| %>
+  Crea nuovo repository <%= person_form.text_field :name %>
+  <%= person_form.submit %>
+<% end %>

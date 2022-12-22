@@ -1,0 +1,12 @@
+<h2>Repositories List</h2>
+
+<pre>
+<%= %x(find /mnt/Repositories/ -name "*.git" -printf "tsmgitserver:/mnt/Vol01/Development/git/%P\n") %>
+</pre>
+
+<%= form_tag("/newrepo", method: "get") do %>
+  <%= label_tag(:q, "Create Repository:") %>
+  <%= text_field_tag(:q) %>
+  <%= hidden_field_tag("project_id", params['project_id']) %>
+  <%= submit_tag("Create") %>
+<% end %>
